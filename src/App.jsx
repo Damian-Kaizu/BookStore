@@ -10,8 +10,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Slider />
-      <Bookshowcase />
+      <div className=' mx-3'>
+        <Slider />
+        <Bookshowcase />
+      </div>
     </div>
   )
 }

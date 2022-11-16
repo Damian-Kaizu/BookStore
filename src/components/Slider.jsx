@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination, Scrollbar, A11y, EffectFlip, EffectFade } from 'swiper';
+import { slides } from '../assets/index';
 import './slider.css'
 // Import Swiper styles
 import "swiper/css/effect-fade";
@@ -24,23 +25,16 @@ export class Slider extends Component {
 
                 >
 
-                    <SwiperSlide className="single_testimonial rounded-2xl
-                    ">
-                        <h3>Slide 1</h3>
-                        <p>     Dolor laborum anim excepteur pariatur exercitation.</p>
-                    </SwiperSlide>
-                    <SwiperSlide className="single_testimonial">
-                        <h3>Slide 2</h3>
-                        <p>Nulla ut non ut deserunt deserunt aliquip quis quis amet fugiat laboris consectetur.</p>
-                    </SwiperSlide>
-                    <SwiperSlide className="single_testimonial">
-                        <h3>Slide 3</h3>
-                        <p>Sint id consequat laboris incididunt sit ut qui cupidatat nisi mollit do nulla nisi reprehenderit.</p>
-                    </SwiperSlide>
-                    <SwiperSlide className="single_testimonial">
-                        <h3>Slide 4</h3>
-                        <p>Sunt eu aliqua nostrud voluptate commodo dolor nulla deserunt ex.</p>
-                    </SwiperSlide>
+                    {slides.map((slide) => (
+                        <SwiperSlide className='single_testimonial rounded-2xl'>
+                            <h3 >{slide.title}</h3>
+                            <p>{slide.description}</p>
+                        </SwiperSlide>
+                    )
+                    )
+                    }
+
+
                 </Swiper>
             </>
         )
